@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    DateTime fileLastWrittenDate = MessengerHealth.Models.MessengerFiles.lastWrittenDate;
+
+}
+@model List<MessengerHealth.Models.MessengerFiles>
+<div class="text-center">
+    <h1 class="display-4">Messaging Status</h1>
+    <h5>Last time a file was written in directory: <b>@fileLastWrittenDate</b></h5>
+    <h5>Total number of files: @Model.Count</h5>
+    <form id="mainForm" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index" class="form-group">
+        <input id="jur" type="text" name="jurisdiction" hidden="hidden" />
+        <input id="pro" type="text" name="procedureCode" hidden="hidden" />
+        <input id="service" type="text" name="service" hidden="hidden" />
+
+        <select id="serviceDropdown" class="btn-lg dropdown-toggle" required>
+            <option class="e-popup" value="null">Select a value</option>
+            <option class="e-popup" value="In">In</option>
+            <option class="e-popup" value="Out">Out</option>
+        </select>
+        <select id="jurDropdown" class="btn-lg dropdown-toggle" required>
+            @*<option class="e-popup" value="null">Select a value</option>*@
+        </select>
+        <select id="dropdownValues" class="btn-lg dropdown-toggle" required>
+            @*<option class="e-popup" value="null">Select a value</option>*@
+        </select>
+        <input id="submit" type="submit" value="Submit" class="btn btn-primary btn-lg" />
+    </form>
+    <table class="table table-hover table-striped table-responsive">
+        <thead>
+            <tr>
+                <th scope="col" class="text-left">Number</th>
+                <th scope="col" class="text-center">FileName</th>
+                <th scope="col" class="text-center">Last Accessed Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int count = 1;}
+            @{ foreach (var f in Model)
+                {
+                    string fileName = f.GetShortFileName();
+                    int filePos = count;
+                    DateTime time = f.LasTimeAccessed;
+                    count = count + 1;
+                    <tr>
+                        <th scope="row">@filePos</th>
+                        <td scope="row">@fileName</td>
+                        <td scope="row">@time</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            const jurisdictions = ["BE", "IE", "GB", "DE", "NL"];
+
+            const gb = ["CCS", "CCS2", "CCS3", "CCS4", "CCS-ReTry", "CFSP", "CFSP-ReTry", "CNS", "CNS2", "CNS3", "CNS4", "CNS-ReTry", "DOVER", "HMRC", "HMRC2", "HMRC3", "HMRC4", "HMRC5", "HMRC6", "ICS", "MCP", "MCP2", "MCP3", "MCP4", "MCP-ReTry"];
+            const ie = ["AEP", "AIS", "AES", "NCTS"];
+            const be = ["APCS", "BRU", "NCTS", "PLDA", "TUL"];
+            const de = ["DAK", "EDI", "EDI2", "EDI3", "EDI4", "EDI-ReTry"];
+            const nl = ["AGS", "DGVS", "DMS", "DMS2", "DMS3", "DMS4", "NCTS", "PCS", "PORTBASE", "SAGITTA", "VWA"];
+
+            const beOut = ["APCS", "APM", "BRU", "DPW", "NCTS", "PLDA", "PSA"];
+            const deOut = ["DAK", "EDI"];
+            const gbOut = ["CCS", "CFSP", "CNS", "DOVER", "HMRC", "MCP"];
+            const ieOut = ["AEP", "AES", "AIS", "NCTS"];
+            const nlOut = ["AGS", "CONF", "CPD", "DGVS", "DMS", "DOMPROC", "NCTS", "PCS", "SAGIMP", "SW", "VWA"];
+
+            let dropdown = document.querySelector('#jurDropdown');
+            let dropdownValues = document.querySelector('#dropdownValues');
+            let serviceDropdown = document.querySelector('#serviceDropdown');
+
+            let service = "";
+
+            $(serviceDropdown).change(event => {
+                service = event.target.value;
+                if (service == "In" || service == "Out") {
+                    dropdown.options.length = 0;
+                    for (let i = 0; i < jurisdictions.length; i++) {
+                        $('<option>').val(jurisdictions[i]).html(jurisdictions[i]).attr('id', 'jurisdiction' + jurisdictions[i]).attr('name', 'jurisdiction').appendTo(dropdown);
+                    }
+                }
+                else {
+                    dropdownValues.options.length = 0;
+                    $(dropdownValues).val("").html("Select a value");
+                    dropdown.options.length = 0;
+                    $(dropdown).val("").html("Select a value");
+
+                }
+                $(dropdown).val("");
+                $(dropdownValues).val("");
+            });
+
+            $(dropdown).change(event => {
+                let selected = event.target.value;
+                let dropdownValues = "";
+                if (jurisdictions.includes(selected))
+                {
+                    let el = document.getElementById("dropdownValues");
+                    el.options.length = 0;
+
+                    switch (selected.toLowerCase()) {
+                        case 'gb':
+
+                            if (service.toLowerCase() == "out") {
+                                dropdownValues = gbOut;
+                                break;
+                            }
+                            dropdownValues = gb;
+                            break;
+                        case 'ie':
+
+                            if (service.toLowerCase() == "out") {
+                                dropdownValues = ieOut;
+                                break;
+                            }
+                            dropdownValues = ie;
+                            break;
+                        case 'be':
+
+                            if (service.toLowerCase() == "out") {
+                                dropdownValues = beOut;
+                                break;
+                            }
+                            dropdownValues = be;
+                            break;
+                        case 'de':
+
+                            if (service.toLowerCase() == "out") {
+                                dropdownValues = deOut;
+                                break;
+                            }
+                            dropdownValues = de;
+                            break;
+                        case 'nl':
+
+                            if (service.toLowerCase() == "out") {
+                                dropdownValues = nlOut;
+                                break;
+                            }
+                            dropdownValues = nl;
+                            break;
+                    }
+                    createDropdownAndPopulateValues(el, dropdownValues);
+                }
+            });
+
+            function createDropdownAndPopulateValues(dropdownElement, values) {
+                dropdownElement.options.length = 0;
+                for (let i = 0; i < values.length; i++) {
+                    $('<option>').val(values[i]).html(values[i]).attr('id', 'procedureCode' + values[i]).attr('name', 'procedure').appendTo(dropdownElement);
+                }
+                $(dropdownElement).val("");
+            }
+
+            $(dropdown).on('change', () => {
+                let jurSelected = document.getElementById('jurDropdown').value;
+                let optionSelected = document.getElementById('jurisdiction' + jurSelected);
+                $('#jur').val(jurSelected);
+            });
+
+            $(dropdownValues).on('change', () => {
+                let procSelected = document.getElementById('dropdownValues').value;
+                let optionSelected = document.getElementById('procedureCode' + procSelected);
+                $('#pro').val(procSelected);
+            });
+
+            $(serviceDropdown).on('change', () => {
+                let serviceSelected = document.getElementById('serviceDropdown').value;
+                let optionSelected = document.getElementById('procedureCode' + serviceSelected);
+                $('#service').val(serviceSelected);
+            });
+
+            $("#submit").click(() => {
+                $("jur").val("");
+                $("pro").val("");
+                $("service").val("");
+            });
+
+        });
+    </script>
+}

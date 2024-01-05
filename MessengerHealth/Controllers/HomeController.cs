@@ -59,19 +59,19 @@ namespace MessengerHealth.Controllers
 
             MessengerFiles.lastWrittenDate = Directory.GetLastWriteTime(dir);
 
-            List<MessengerFiles> messengerFiles1 = new List<MessengerFiles>();
+            List<MessengerFiles> listOfFiles = new List<MessengerFiles>();
 
             for (int i = 0; i < files.Length; i++)
             {
                 DateTime lastTime = Directory.GetLastAccessTimeUtc(files[i]);
                 string fileName = files[i];
                 MessengerFiles messengerFiles = new MessengerFiles(fileName, lastTime);
-                messengerFiles1.Add(messengerFiles);
+                listOfFiles.Add(messengerFiles);
             }
 
             int numberOfFiles = files.Length;
 
-            return View(messengerFiles1);
+            return View(listOfFiles);
         }
 
         public ActionResult About()

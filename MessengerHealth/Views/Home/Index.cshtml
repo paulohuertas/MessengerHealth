@@ -65,12 +65,16 @@
             }
         </tbody>
     </table>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
 </div>
 
+<script src="~/Scripts/chart.js"></script>
 @section scripts{
     <script>
-        $(document).ready(function () {
 
+        $(document).ready(function () {
             const jurisdictions = ["BE", "IE", "GB", "DE", "NL"];
 
             let jurisdictionListObject = {
@@ -197,6 +201,37 @@
                 }
                 return "";
             }
+
+            //Chart below
+
+            const ctx = document.getElementById('myChart');
+            const testData = {
+                "BE": 7,
+                "NL": 8,
+                "IE": @Model.Count,
+                "GB": 10,
+                "DE": 11
+            };
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: jurisdictions,
+                    datasets: [{
+                        label: 'Number of Files',
+                        /*data: [12, 19, 3, 5, 2, 3],*/
+                        data: testData,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
             //$('table').on('click', (e) => {
             //    let currentXmlFile = "";

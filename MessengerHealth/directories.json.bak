@@ -1,0 +1,436 @@
+[
+    {
+        "juridisctionId": 1,
+        "juridisctionCode": "BE",
+        "service": [
+            {
+                "Out": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "APCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\APCS"
+                            },
+                            {
+                                "procedureCode": "APM",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\APM"
+                            },
+                            {
+                                "procedureCode": "BRU",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\BRU"
+                            },
+                            {
+                                "procedureCode": "DPW",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\DPW"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\NCTS"
+                            },
+                            {
+                                "procedureCode": "PLDA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\PLDA"
+                            },
+                            {
+                                "procedureCode": "PSA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\BE\\PSA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "In": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "APCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\BE\\APCS"
+                            },
+                            {
+                                "procedureCode": "BRU",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\BE\\BRU"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\BE\\NCTS"
+                            },
+                            {
+                                "procedureCode": "PLDA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\BE\\PLDA"
+                            },
+                            {
+                                "procedureCode": "TUL",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\BE\\TUL"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "juridisctionId": 2,
+        "juridisctionCode": "DE",
+        "service": [
+            {
+                "Out": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "DAK",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\DE\\DAK"
+                            },
+                            {
+                                "procedureCode": "EDI",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\DE\\EDI"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "In": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "DAK",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\DAK"
+                            },
+                            {
+                                "procedureCode": "EDI",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\EDI"
+                            },
+                            {
+                                "procedureCode": "EDI2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\EDI2"
+                            },
+                            {
+                                "procedureCode": "EDI3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\EDI3"
+                            },
+                            {
+                                "procedureCode": "EDI4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\EDI4"
+                            },
+                            {
+                                "procedureCode": "EDI-ReTry",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\DE\\EDI-ReTry"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "juridisctionId": 3,
+        "juridisctionCode": "GB",
+        "service": [
+            {
+                "Out": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "CCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\CCS"
+                            },
+                            {
+                                "procedureCode": "CFSP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\CFSP"
+                            },
+                            {
+                                "procedureCode": "CNS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\CNS"
+                            },
+                            {
+                                "procedureCode": "DOVER",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\DOVER"
+                            },
+                            {
+                                "procedureCode": "HMRC",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\HMRC"
+                            },
+                            {
+                                "procedureCode": "MCP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\GB\\MCP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "In": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "CCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CCS"
+                            },
+                            {
+                                "procedureCode": "CCS2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CCS2"
+                            },
+                            {
+                                "procedureCode": "CCS3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CCS3"
+                            },
+                            {
+                                "procedureCode": "CCS4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CCS4"
+                            },
+                            {
+                                "procedureCode": "CCS-ReTry",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CCS-ReTry"
+                            },
+                            {
+                                "procedureCode": "CFSP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CFSP"
+                            },
+                            {
+                                "procedureCode": "CFSP-ReTry",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CFSP-ReTry"
+                            },
+                            {
+                                "procedureCode": "CNS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CNS"
+                            },
+                            {
+                                "procedureCode": "CNS2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CNS2"
+                            },
+                            {
+                                "procedureCode": "CNS3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CNS3"
+                            },
+                            {
+                                "procedureCode": "CNS4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CNS4"
+                            },
+                            {
+                                "procedureCode": "CNS-ReTry",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\CNS-ReTry"
+                            },
+                            {
+                                "procedureCode": "DOVER",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\DOVER"
+                            },
+                            {
+                                "procedureCode": "HMRC",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC"
+                            },
+                            {
+                                "procedureCode": "HMRC2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC2"
+                            },
+                            {
+                                "procedureCode": "HMRC3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC3"
+                            },
+                            {
+                                "procedureCode": "HMRC4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC4"
+                            },
+                            {
+                                "procedureCode": "HMRC5",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC5"
+                            },
+                            {
+                                "procedureCode": "HMRC6",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\HMRC6"
+                            },
+                            {
+                                "procedureCode": "ICS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\ICS"
+                            },
+                            {
+                                "procedureCode": "MCP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\MCP"
+                            },
+                            {
+                                "procedureCode": "MCP2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\MCP2"
+                            },
+                            {
+                                "procedureCode": "MCP3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\MCP3"
+                            },
+                            {
+                                "procedureCode": "MCP4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\MCP4"
+                            },
+                            {
+                                "procedureCode": "MCP-ReTry",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\GB\\MCP-ReTry"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "juridisctionId": 4,
+        "juridisctionCode": "IE",
+        "service": [
+            {
+                "Out": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "AEP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\IE\\AEP"
+                            },
+                            {
+                                "procedureCode": "AIS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\IE\\AIS"
+                            },
+                            {
+                                "procedureCode": "AES",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\IE\\AES"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\IE\\NCTS"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "In": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "AEP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\IE\\AEP"
+                            },
+                            {
+                                "procedureCode": "AIS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\IE\\AIS"
+                            },
+                            {
+                                "procedureCode": "AES",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\IE\\AES"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\IE\\NCTS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "juridisctionId": 5,
+        "juridisctionCode": "NL",
+        "service": [
+            {
+                "Out": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "AGS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\AGS"
+                            },
+                            {
+                                "procedureCode": "CONF",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\CONF"
+                            },
+                            {
+                                "procedureCode": "CPD",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\CPD"
+                            },
+                            {
+                                "procedureCode": "DGVS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\DGVS"
+                            },
+                            {
+                                "procedureCode": "DMS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\DMS"
+                            },
+                            {
+                                "procedureCode": "DOMPROC",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\DOMPROC"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\NCTS"
+                            },
+                            {
+                                "procedureCode": "PCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\PCS"
+                            },
+                            {
+                                "procedureCode": "SAGIMP",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\SAGIMP"
+                            },
+                            {
+                                "procedureCode": "SW",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\SW"
+                            },
+                            {
+                                "procedureCode": "VWA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\Out\\NL\\VWA"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "In": [
+                    {
+                        "Procedures": [
+                            {
+                                "procedureCode": "AGS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\AGS"
+                            },
+                            {
+                                "procedureCode": "DGVS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\DGVS"
+                            },
+                            {
+                                "procedureCode": "DMS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\DMS"
+                            },
+                            {
+                                "procedureCode": "DMS2",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\DMS2"
+                            },
+                            {
+                                "procedureCode": "DMS3",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\DMS3"
+                            },
+                            {
+                                "procedureCode": "DMS4",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\DMS4"
+                            },
+                            {
+                                "procedureCode": "NCTS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\NCTS"
+                            },
+                            {
+                                "procedureCode": "PCS",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\PCS"
+                            },
+                            {
+                                "procedureCode": "PORTBASE",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\PORTBASE"
+                            },
+                            {
+                                "procedureCode": "SAGITTA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\SAGITTA"
+                            },
+                            {
+                                "procedureCode": "VWA",
+                                "directoryPath": "C:\\Users\\dub-pauloh\\Desktop\\LinkedinLearning\\CustomsWare\\In\\NL\\VWA"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

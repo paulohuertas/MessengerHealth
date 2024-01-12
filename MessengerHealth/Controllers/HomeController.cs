@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -28,8 +29,9 @@ namespace MessengerHealth.Controllers
                 MessengerFiles messengerFiles = new MessengerFiles(fileName, lastTime);
                 messengerFiles1.Add(messengerFiles);
             }
-
-            int numberOfFiles = Directory.GetFiles(dir).Length;
+            string path = @"C:\Users\dub-pauloh\Desktop\PauloExpeditors\Personal\C#\MessengerHealth\MessengerHealth\MessengerHealth\directories.json";
+            ReadAndParseJsonFile parser = new ReadAndParseJsonFile(path);
+            List<Juridisction> juridisctions = parser.UseUserDefinedObjectJson();
 
             return View(messengerFiles1);
         }
@@ -37,7 +39,7 @@ namespace MessengerHealth.Controllers
         public ActionResult Index(string jurisdiction, string procedureCode, string service)
         {
             string keySearch = $@"directory{service}";
-            string dir = String.Empty;
+            string dir;
 
             if (!String.IsNullOrEmpty(keySearch))
             {
@@ -68,8 +70,6 @@ namespace MessengerHealth.Controllers
                 MessengerFiles messengerFiles = new MessengerFiles(fileName, lastTime);
                 listOfFiles.Add(messengerFiles);
             }
-
-            int numberOfFiles = files.Length;
 
             return View(listOfFiles);
         }

@@ -4,7 +4,8 @@
 
 }
 @model List<MessengerHealth.Models.MessengerFiles>
-<img id="pitlogo" src="~/Content/Img/pitdroid_logo.png" class="img-responsive top-left col-sm-2" alt="...">
+
+<img id="pitlogo" src="~/Content/Img/pitdroid_logo.png" class="img-responsive top-left col-sm-2" alt="..." />
 <div class="text-center">
     <h1 class="display-4">Messaging Status</h1>
     <h5>Last time a file was written in directory: <b>@fileLastWrittenDate</b></h5>
@@ -38,24 +39,28 @@
                 <th scope="col" class="text-left">Number</th>
                 <th scope="col" class="text-center">FileName</th>
                 <th scope="col" class="text-center">Last Accessed Time</th>
+                <th scope="col" class="img-responsive">Status</th>
             </tr>
         </thead>
         <tbody>
             @{ int count = 1;}
             @{ foreach (var f in Model)
                 {
-                    string fileName = f.GetShortFileName();
                     int filePos = count;
+                    string fileName = f.GetShortFileName();
                     DateTime time = f.LasTimeAccessed;
-                    count = count + 1;
                     DateTime now = DateTime.Now;
                     TimeSpan timeSpan = now - time;
+                    string srcFile = (timeSpan.TotalMinutes > 60 ? "/Content/Img/alert.svg" : "/Content/Img/waiting.png");
                     <tr class="@(timeSpan.TotalMinutes > 60 ? "danger" : "")">
                         <th scope="row">@filePos</th>
                         <td scope="row">@fileName</td>
                         <td scope="row">@time</td>
+                        <td scope="row">
+                            <a asp-action="About" aps-route-id="img-@count"><img id="img-@count" src="@srcFile" class="img-responsive" style="width: 20px; height: 20px;" /></a>
+                        </td>
                     </tr>
-
+                    count = count + 1;
                 }
             }
         </tbody>
@@ -96,8 +101,9 @@
                 service = event.target.value;
                 if (service == "In" || service == "Out") {
                     dropdown.options.length = 0;
+
                     for (let i = 0; i < jurisdictions.length; i++) {
-                        $('<option>').val(jurisdictions[i]).html(jurisdictions[i]).attr('id', 'jurisdiction' + jurisdictions[i]).attr('name', 'jurisdiction').appendTo(dropdown);
+                        $('<option>').val(jurisdictions[i]).html(jurisdictions[i]).attr('id', 'jurisdiction_' + jurisdictions[i].toLowerCase()).attr('name', 'jurisdiction').appendTo(dropdown);
                     }
                 }
                 else {
@@ -125,30 +131,18 @@
                 }
             });
 
-            function createDropdownAndPopulateValues(dropdownElement, values) {
-
-                dropdownElement.options.length = 0;
-                for (let i = 0; i < values.length; i++) {
-                    $('<option>').val(values[i]).html(values[i]).attr('id', 'procedureCode' + values[i]).attr('name', 'procedure').appendTo(dropdownElement);
-                }
-                $(dropdownElement).val("");
-            }
-
             $(dropdown).on('change', () => {
                 let jurSelected = document.getElementById('jurDropdown').value;
-                let optionSelected = document.getElementById('jurisdiction' + jurSelected);
                 $('#jur').val(jurSelected);
             });
 
             $(dropdownValues).on('change', () => {
                 let procSelected = document.getElementById('dropdownValues').value;
-                let optionSelected = document.getElementById('procedureCode' + procSelected);
                 $('#pro').val(procSelected);
             });
 
             $(serviceDropdown).on('change', () => {
                 let serviceSelected = document.getElementById('serviceDropdown').value;
-                let optionSelected = document.getElementById('procedureCode' + serviceSelected);
                 $('#service').val(serviceSelected);
             });
 
@@ -159,9 +153,74 @@
             });
 
             $('#pitlogo').click(() => {
-                alert("You know, it's costing me a lot of money to keep these droids even powered up");
+                let pitdroidMessage = document.getElementById('pitdroid-mes');
+                if (pitdroidMessage == null) {
+                    $('<h3>').html(generateRandomText(randomMessagges)).attr('id', 'pitdroid-mes').addClass('text-success').insertBefore('table');
+                } else {
+                    let currentMessage = pitdroidMessage.textContent;
+                    while (currentMessage == pitdroidMessage.textContent) {
+                        $(pitdroidMessage).html(generateRandomText(randomMessagges));
+                    }
+                }
             });
 
+            const randomMessagges = {
+                "message1": "\"You know, it's costing me a lot of money to keep these droids even powered up\"",
+                "message2": "I don't know you... What can I do for you? You look like a Jedi. Whatever it is... I didn't do it",
+                "message3": "Oh Lord, I can't find my message",
+            };
+
+            function createDropdownAndPopulateValues(dropdownElement, values)
+            {
+
+                dropdownElement.options.length = 0;
+                for (let i = 0; i < values.length; i++)
+                {
+                    $('<option>').val(values[i]).html(values[i]).attr('id', 'procedureCode' + values[i]).attr('name', 'procedure').appendTo(dropdownElement);
+                }
+
+                $(dropdownElement).val("");
+            }
+
+            function generateRandomText(textObj)
+            {
+                if (textObj != null)
+                {
+                    let keys = Object.keys(textObj);
+                    let rdn = -1;
+                    while (rdn < 0)
+                    {
+                        rdn = Math.floor(Math.round(Math.random() * keys.length - 1, 1));
+                    }
+                    let selectedMessage = keys[rdn];
+                    return textObj[selectedMessage];
+                }
+                return "";
+            }
+
+            //$('table').on('click', (e) => {
+            //    let currentXmlFile = "";
+            //    let rows = document.querySelectorAll('tbody > tr');
+            //    if (rows != null) {
+            //        $(rows).each((index, element) => {
+            //            index = index + 1;
+            //            let img = document.getElementsByTagName('img')[index];
+            //            document.getElementsByTagName('td')[index];
+            //            if (img != null) {
+            //                if (img.id == e.target.id) {
+            //                    let clickedElement = document.getElementById('clicked-elem');
+            //                    if (clickedElement == null) {
+            //                        $('<p>').html(element.children[1].textContent).attr('id', 'clicked-elem').insertAfter('table');
+            //                    } else {
+            //                        currentXmlFile = e.target.parentElement.parentElement.parentElement.children[1].textContent;
+            //                        $(clickedElement).html(currentXmlFile);
+            //                    }
+            //                }
+            //            }
+            //        });
+            //    }
+
+            //});
         });
     </script>
 }

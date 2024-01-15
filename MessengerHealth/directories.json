@@ -1,6 +1,6 @@
 [
     {
-        "juridisctionId": 1,
+        "jurisdictionId": 1,
         "juridisctionCode": "BE",
         "services": [
             {
@@ -70,7 +70,7 @@
         ]
     },
     {
-        "juridisctionId": 2,
+        "jurisdictionId": 2,
         "juridisctionCode": "DE",
         "services": [
             {
@@ -124,7 +124,7 @@
         ]
     },
     {
-        "juridisctionId": 3,
+        "jurisdictionId": 3,
         "juridisctionCode": "GB",
         "services": [
             {
@@ -270,7 +270,7 @@
         ]
     },
     {
-        "juridisctionId": 4,
+        "jurisdictionId": 4,
         "juridisctionCode": "IE",
         "services": [
             {
@@ -324,7 +324,7 @@
         ]
     },
     {
-        "juridisctionId": 5,
+        "jurisdictionId": 5,
         "juridisctionCode": "NL",
         "services": [
             {

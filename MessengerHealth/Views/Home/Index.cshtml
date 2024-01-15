@@ -3,7 +3,8 @@
     DateTime fileLastWrittenDate = MessengerHealth.Models.MessengerFiles.lastWrittenDate;
 
 }
-@model List<MessengerHealth.Models.MessengerFiles>
+@*@model List<MessengerHealth.Models.MessengerFiles>*@
+@model List<Dictionary<string, int>>
 
 <img id="pitlogo" src="~/Content/Img/pitdroid_logo.png" class="img-responsive top-left col-sm-2" alt="..." />
 <div class="text-center">
@@ -33,7 +34,7 @@
             <h4>Rows in <span class="text-danger"><b>red</b></span> show files sitting in the folder for more than 1h waiting to be processed.</h4>
         }
     }
-    <table class="table table-hover table-striped table-responsive">
+    @*<table class="table table-hover table-striped table-responsive">
         <thead>
             <tr>
                 <th scope="col" class="text-left">Number</th>
@@ -64,7 +65,40 @@
                 }
             }
         </tbody>
-    </table>
+    </table>*@
+    @{ 
+        List<int> totalFiles = new List<int>();
+        List<string> labels = new List<string>();
+        <div id="novoP">
+            @foreach(var kvp in @Model)
+            {
+                var keys = kvp.Keys;
+                int numberOfFiles;
+                foreach(string k in keys)
+                {
+                    string DirName;
+                    if (k.Contains("Out"))
+                    {
+                        DirName = "Out/";
+                    }
+                    else
+                    {
+                        DirName = "In/";
+                    }
+                    kvp.TryGetValue(k, out numberOfFiles);
+                    totalFiles.Add(numberOfFiles);
+                    string tempTxt = k;
+                    string txt = tempTxt.Substring(tempTxt.LastIndexOf("\\") + 1);
+                    DirName = DirName + txt;
+                    if (!String.IsNullOrEmpty(txt))
+                    {
+                        labels.Add(DirName);
+                        <p id="@DirName" hidden>@numberOfFiles</p>
+                    }
+                }
+            }
+        </div>
+    }
     <div>
         <canvas id="myChart"></canvas>
     </div>
@@ -202,60 +236,44 @@
                 return "";
             }
 
-            //Chart below
-
-            const ctx = document.getElementById('myChart');
-            const testData = {
-                "BE": 7,
-                "NL": 8,
-                "IE": @Model.Count,
-                "GB": 10,
-                "DE": 11
-            };
+            const pEle = document.getElementById('novoP');
+            const paragraph = pEle.children;
+            console.log(paragraph);
+            let finalLabels = [];
+            let finalData = [];
+            $(paragraph).each((index, p) => {
+                finalLabels.push(p.id);
+                let txt = p.innerHTML;
+                console.log(txt);
+                finalData.push(txt);
+            });
             
+            //Chart below
+            const ctx = document.getElementById('myChart');
+
             new Chart(ctx, {
-                type: 'bar',
+                type: 'pie',
                 data: {
-                    labels: jurisdictions,
+                    labels: finalLabels,
                     datasets: [{
                         label: 'Number of Files',
-                        /*data: [12, 19, 3, 5, 2, 3],*/
-                        data: testData,
+                        data: finalData,
                         borderWidth: 1
                     }]
                 },
                 options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                boxWidth: 60,
+                                boxHeight: 10
+                            }
                         }
                     }
                 }
             });
-
-            //$('table').on('click', (e) => {
-            //    let currentXmlFile = "";
-            //    let rows = document.querySelectorAll('tbody > tr');
-            //    if (rows != null) {
-            //        $(rows).each((index, element) => {
-            //            index = index + 1;
-            //            let img = document.getElementsByTagName('img')[index];
-            //            document.getElementsByTagName('td')[index];
-            //            if (img != null) {
-            //                if (img.id == e.target.id) {
-            //                    let clickedElement = document.getElementById('clicked-elem');
-            //                    if (clickedElement == null) {
-            //                        $('<p>').html(element.children[1].textContent).attr('id', 'clicked-elem').insertAfter('table');
-            //                    } else {
-            //                        currentXmlFile = e.target.parentElement.parentElement.parentElement.children[1].textContent;
-            //                        $(clickedElement).html(currentXmlFile);
-            //                    }
-            //                }
-            //            }
-            //        });
-            //    }
-
-            //});
         });
     </script>
 }

@@ -1,0 +1,386 @@
+[
+  {
+    "jurisdictionId": 1,
+    "juridisctionCode": "BE",
+    "procedures": {
+      "services": {
+        "Out": [
+          {
+            "procedureCode": "APCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\APCS"
+          },
+          {
+            "procedureCode": "APM",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\APM"
+          },
+          {
+            "procedureCode": "BRU",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\BRU"
+          },
+          {
+            "procedureCode": "DPW",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\DPW"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\NCTS"
+          },
+          {
+            "procedureCode": "PLDA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\PLDA"
+          },
+          {
+            "procedureCode": "PSA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\BE\\PSA"
+          }
+        ],
+        "In": [
+          {
+            "procedureCode": "APCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\BE\\APCS"
+          },
+          {
+            "procedureCode": "BRU",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\BE\\BRU"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\BE\\NCTS"
+          },
+          {
+            "procedureCode": "PLDA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\BE\\PLDA"
+          },
+          {
+            "procedureCode": "TUL",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\BE\\TUL"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "jurisdictionId": 2,
+    "juridisctionCode": "DE",
+    "procedures": {
+      "services": {
+        "Out": [
+          {
+            "procedureCode": "DAK",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\DE\\DAK"
+          },
+          {
+            "procedureCode": "EDI",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\DE\\EDI"
+          }
+        ],
+        "In": [
+          {
+            "procedureCode": "DAK",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\DAK"
+          },
+          {
+            "procedureCode": "EDI",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\EDI"
+          },
+          {
+            "procedureCode": "EDI2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\EDI2"
+          },
+          {
+            "procedureCode": "EDI3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\EDI3"
+          },
+          {
+            "procedureCode": "EDI4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\EDI4"
+          },
+          {
+            "procedureCode": "EDI-ReTry",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\DE\\EDI-ReTry"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "jurisdictionId": 3,
+    "juridisctionCode": "GB",
+    "procedures": {
+      "services": {
+        "Out": [
+          {
+            "procedureCode": "CCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\CCS"
+          },
+          {
+            "procedureCode": "CFSP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\CFSP"
+          },
+          {
+            "procedureCode": "CNS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\CNS"
+          },
+          {
+            "procedureCode": "DOVER",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\DOVER"
+          },
+          {
+            "procedureCode": "HMRC",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\HMRC"
+          },
+          {
+            "procedureCode": "MCP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\GB\\MCP"
+          }
+        ],
+        "In": [
+          {
+            "procedureCode": "CCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CCS"
+          },
+          {
+            "procedureCode": "CCS2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CCS2"
+          },
+          {
+            "procedureCode": "CCS3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CCS3"
+          },
+          {
+            "procedureCode": "CCS4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CCS4"
+          },
+          {
+            "procedureCode": "CCS-ReTry",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CCS-ReTry"
+          },
+          {
+            "procedureCode": "CFSP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CFSP"
+          },
+          {
+            "procedureCode": "CFSP-ReTry",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CFSP-ReTry"
+          },
+          {
+            "procedureCode": "CNS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CNS"
+          },
+          {
+            "procedureCode": "CNS2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CNS2"
+          },
+          {
+            "procedureCode": "CNS3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CNS3"
+          },
+          {
+            "procedureCode": "CNS4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CNS4"
+          },
+          {
+            "procedureCode": "CNS-ReTry",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\CNS-ReTry"
+          },
+          {
+            "procedureCode": "DOVER",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\DOVER"
+          },
+          {
+            "procedureCode": "HMRC",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC"
+          },
+          {
+            "procedureCode": "HMRC2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC2"
+          },
+          {
+            "procedureCode": "HMRC3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC3"
+          },
+          {
+            "procedureCode": "HMRC4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC4"
+          },
+          {
+            "procedureCode": "HMRC5",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC5"
+          },
+          {
+            "procedureCode": "HMRC6",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\HMRC6"
+          },
+          {
+            "procedureCode": "ICS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\ICS"
+          },
+          {
+            "procedureCode": "MCP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\MCP"
+          },
+          {
+            "procedureCode": "MCP2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\MCP2"
+          },
+          {
+            "procedureCode": "MCP3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\MCP3"
+          },
+          {
+            "procedureCode": "MCP4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\MCP4"
+          },
+          {
+            "procedureCode": "MCP-ReTry",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\GB\\MCP-ReTry"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "jurisdictionId": 4,
+    "juridisctionCode": "IE",
+    "procedures": {
+      "services": {
+        "Out": [
+          {
+            "procedureCode": "AEP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\IE\\AEP"
+          },
+          {
+            "procedureCode": "AIS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\IE\\AIS"
+          },
+          {
+            "procedureCode": "AES",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\IE\\AES"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\IE\\NCTS"
+          }
+        ],
+        "In": [
+          {
+            "procedureCode": "AEP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\IE\\AEP"
+          },
+          {
+            "procedureCode": "AIS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\IE\\AIS"
+          },
+          {
+            "procedureCode": "AES",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\IE\\AES"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\IE\\NCTS"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "jurisdictionId": 5,
+    "juridisctionCode": "NL",
+    "procedures": {
+      "services": {
+        "Out": [
+          {
+            "procedureCode": "AGS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\AGS"
+          },
+          {
+            "procedureCode": "CONF",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\CONF"
+          },
+          {
+            "procedureCode": "CPD",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\CPD"
+          },
+          {
+            "procedureCode": "DGVS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\DGVS"
+          },
+          {
+            "procedureCode": "DMS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\DMS"
+          },
+          {
+            "procedureCode": "DOMPROC",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\DOMPROC"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\NCTS"
+          },
+          {
+            "procedureCode": "PCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\PCS"
+          },
+          {
+            "procedureCode": "SAGIMP",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\SAGIMP"
+          },
+          {
+            "procedureCode": "SW",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\SW"
+          },
+          {
+            "procedureCode": "VWA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\Out\\NL\\VWA"
+          }
+        ],
+        "In": [
+          {
+            "procedureCode": "AGS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\AGS"
+          },
+          {
+            "procedureCode": "DGVS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\DGVS"
+          },
+          {
+            "procedureCode": "DMS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\DMS"
+          },
+          {
+            "procedureCode": "DMS2",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\DMS2"
+          },
+          {
+            "procedureCode": "DMS3",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\DMS3"
+          },
+          {
+            "procedureCode": "DMS4",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\DMS4"
+          },
+          {
+            "procedureCode": "NCTS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\NCTS"
+          },
+          {
+            "procedureCode": "PCS",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\PCS"
+          },
+          {
+            "procedureCode": "PORTBASE",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\PORTBASE"
+          },
+          {
+            "procedureCode": "SAGITTA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\SAGITTA"
+          },
+          {
+            "procedureCode": "VWA",
+            "directoryPath": "C:\\01. Paulo Huertas\\CustomsWare\\In\\NL\\VWA"
+          }
+        ]
+      }
+    }
+  }
+]

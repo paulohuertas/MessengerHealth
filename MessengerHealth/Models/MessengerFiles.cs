@@ -7,27 +7,33 @@ namespace MessengerHealth.Models
 {
     public class MessengerFiles
     {
-        public string FileName;
+        public string DirectoryPath;
         public DateTime LasTimeAccessed;
-        public static DateTime lastWrittenDate;
+        public DateTime LastWrittenDate;
+        public int TotalFiles;
+        public string ServiceCode;
 
-        public MessengerFiles(string file, DateTime lastTimeAccessed)
+        public MessengerFiles(string file, string serviceCode, DateTime lastWrittenDate, int totalFiles)
         {
-            this.FileName = file;
-            this.LasTimeAccessed = lastTimeAccessed;
+            this.DirectoryPath = file;
+            this.LastWrittenDate = lastWrittenDate;
+            this.TotalFiles = totalFiles;
+            this.ServiceCode = serviceCode;
         }
+
+        public MessengerFiles() { }
 
         public string GetShortFileName()
         {
             try
             {
-                if (String.IsNullOrEmpty(this.FileName)) return "";
+                if (String.IsNullOrEmpty(this.DirectoryPath)) return "";
 
                 string temp = String.Empty;
 
-                temp = this.FileName;
+                temp = this.DirectoryPath;
 
-                temp = temp.Substring(this.FileName.LastIndexOf("\\") + 1);
+                temp = temp.Substring(this.DirectoryPath.LastIndexOf("\\") + 1);
 
                 return temp;
             }

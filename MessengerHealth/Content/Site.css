@@ -30,3 +30,18 @@ textarea {
 #pitdroid-mes {
     font-family: "Audiowide", sans-serif;
 }
+
+h1 {
+    font-family: "Audiowide", sans-serif;
+}
+
+#serviceInput {
+    background-image: url('/Content/Img/searchicon1.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}

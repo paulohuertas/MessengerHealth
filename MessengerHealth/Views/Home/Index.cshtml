@@ -1,279 +1,250 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    DateTime fileLastWrittenDate = MessengerHealth.Models.MessengerFiles.lastWrittenDate;
-
+    MessengerHealth.Models.MessengerFiles messengerFiles = new MessengerHealth.Models.MessengerFiles();
 }
-@*@model List<MessengerHealth.Models.MessengerFiles>*@
-@model List<Dictionary<string, int>>
 
-<img id="pitlogo" src="~/Content/Img/pitdroid_logo.png" class="img-responsive top-left col-sm-2" alt="..." />
-<div class="text-center">
-    <h1 class="display-4">Messaging Status</h1>
-    <h5>Last time a file was written in directory: <b>@fileLastWrittenDate</b></h5>
-    <h5>Total number of files: @Model.Count</h5>
-    <form id="mainForm" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index" class="form-group">
-        <input id="jur" type="text" name="jurisdiction" hidden="hidden" />
-        <input id="pro" type="text" name="procedureCode" hidden="hidden" />
-        <input id="service" type="text" name="service" hidden="hidden" />
+@model List<Dictionary<string, MessengerHealth.Models.MessengerFiles>>
 
-        <select id="serviceDropdown" class="btn-lg dropdown-toggle" required>
-            <option class="e-popup" value="null">Select a value</option>
-            <option class="e-popup" value="In">In</option>
-            <option class="e-popup" value="Out">Out</option>
-        </select>
-        <select id="jurDropdown" class="btn-lg dropdown-toggle" required>
-            @*<option class="e-popup" value="null">Select a value</option>*@
-        </select>
-        <select id="dropdownValues" class="btn-lg dropdown-toggle" required>
-            @*<option class="e-popup" value="null">Select a value</option>*@
-        </select>
-        <input id="submit" type="submit" value="Submit" class="btn btn-primary btn-lg" />
+<img id="pitlogo" src="~/Content/Img/expeditors-logo.png" class="img-responsive top-left" alt="..." />
+<div>
+    <div class="text-center">
+        <h1 class="text-info text-uppercase">Messenger</h1>
+    </div>
+    <form id="mainForm" method="get" enctype="multipart/form-data" asp-controller="Home" asp-action="Index" class="form-group text-center">
+
+        <input id="submit" type="submit" value="REFRESH" class="btn btn-primary btn-lg" />
+        <div class="form-check form-switch">
+            <input class="form-check-input" id="refreshCheck" type="checkbox" name="refreshCheck" checked>
+            <label class="form-check-label" for="refreshCheck">Auto Refresh?</label>
+        </div>
     </form>
-    @{ if (Model.Count > 0)
-        {
-            <h4>Rows in <span class="text-danger"><b>red</b></span> show files sitting in the folder for more than 1h waiting to be processed.</h4>
-        }
-    }
-    @*<table class="table table-hover table-striped table-responsive">
-        <thead>
-            <tr>
-                <th scope="col" class="text-left">Number</th>
-                <th scope="col" class="text-center">FileName</th>
-                <th scope="col" class="text-center">Last Accessed Time</th>
-                <th scope="col" class="img-responsive">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{ int count = 1;}
-            @{ foreach (var f in Model)
-                {
-                    int filePos = count;
-                    string fileName = f.GetShortFileName();
-                    DateTime time = f.LasTimeAccessed;
-                    DateTime now = DateTime.Now;
-                    TimeSpan timeSpan = now - time;
-                    string srcFile = (timeSpan.TotalMinutes > 60 ? "/Content/Img/alert.svg" : "/Content/Img/waiting.png");
-                    <tr class="@(timeSpan.TotalMinutes > 60 ? "danger" : "")">
-                        <th scope="row">@filePos</th>
-                        <td scope="row">@fileName</td>
-                        <td scope="row">@time</td>
-                        <td scope="row">
-                            <a asp-action="About" aps-route-id="img-@count"><img id="img-@count" src="@srcFile" class="img-responsive" style="width: 20px; height: 20px;" /></a>
-                        </td>
-                    </tr>
-                    count = count + 1;
-                }
-            }
-        </tbody>
-    </table>*@
-    @{ 
-        List<int> totalFiles = new List<int>();
-        List<string> labels = new List<string>();
+    <input type="text" id="serviceInput" onkeyup="filterService()" placeholder="Search for service" class="input-lg" />
+    @{
         <div id="novoP">
-            @foreach(var kvp in @Model)
-            {
-                var keys = kvp.Keys;
-                int numberOfFiles;
-                foreach(string k in keys)
-                {
-                    string DirName;
-                    if (k.Contains("Out"))
+            <table id="main-table" class="table table-hover table-striped table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Operation</th>
+                        <th scope="col" class="text-center">Service</th>
+                        <th scope="col" class="text-center">Total Files</th>
+                        <th scope="col" class="text-center">Last File Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var kvp in @Model)
                     {
-                        DirName = "Out/";
+                        var keys = kvp.Keys;
+
+                        foreach (string key in keys)
+                        {
+                            string directoryName;
+                            string jurisdictionCode;
+                            string operation;
+                            if (key.Contains("Out"))
+                            {
+                                jurisdictionCode = key.Substring(key.LastIndexOf("\\") -2, 2);
+                                directoryName = jurisdictionCode + "/";
+                            }
+                            else
+                            {
+                                jurisdictionCode = key.Substring(key.LastIndexOf("\\") - 2, 2);
+                                directoryName = jurisdictionCode + "/";
+                            }
+                            kvp.TryGetValue(key, out messengerFiles);
+                            operation = messengerFiles.ServiceCode;
+                            string tempTxt = messengerFiles.DirectoryPath;
+                            string txt = messengerFiles.GetShortFileName();
+                            if (tempTxt.Contains("XML"))
+                            {
+                                directoryName += tempTxt.Substring(tempTxt.LastIndexOf("\\") - 3);
+                                if (directoryName.Contains("\\"))
+                                {
+                                    directoryName = directoryName.Replace("\\", "/");
+                                }
+                            }
+                            else
+                            {
+                                directoryName = directoryName + txt;
+                            }
+                            if (!String.IsNullOrEmpty(txt))
+                            {
+                                <p id="@operation@directoryName" hidden>@messengerFiles.TotalFiles</p>
+                                <tr>
+                                    <td scope="row" class="text-center">@operation</td>
+                                    <td scope="row" class="text-center">@directoryName</td>
+                                    <td scope="row" class="text-center">@messengerFiles.TotalFiles</td>
+                                    <td scope="row" class="text-center">@messengerFiles.LastWrittenDate</td>
+                                </tr>
+                            }
+                        }
                     }
-                    else
-                    {
-                        DirName = "In/";
-                    }
-                    kvp.TryGetValue(k, out numberOfFiles);
-                    totalFiles.Add(numberOfFiles);
-                    string tempTxt = k;
-                    string txt = tempTxt.Substring(tempTxt.LastIndexOf("\\") + 1);
-                    DirName = DirName + txt;
-                    if (!String.IsNullOrEmpty(txt))
-                    {
-                        labels.Add(DirName);
-                        <p id="@DirName" hidden>@numberOfFiles</p>
-                    }
-                }
-            }
+                </tbody>
+            </table>
         </div>
     }
     <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChartIn"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartOut"></canvas>
     </div>
 </div>
 
-<script src="~/Scripts/chart.js"></script>
-@section scripts{
-    <script>
+        <script src="~/Scripts/chart.js"></script>
+        @section scripts{
+            <script>
+                $(document).ready(function () {
 
-        $(document).ready(function () {
-            const jurisdictions = ["BE", "IE", "GB", "DE", "NL"];
+                    $('#pitlogo').click(() => {
+                        let pitdroidMessage = document.getElementById('pitdroid-mes');
+                        if (pitdroidMessage == null) {
+                            $('<h3>').html(generateRandomText(randomMessagges)).attr('id', 'pitdroid-mes').addClass('text-success').insertBefore(pEle);
+                        } else {
+                            let currentMessage = pitdroidMessage.textContent;
+                            while (currentMessage == pitdroidMessage.textContent) {
+                                $(pitdroidMessage).html(generateRandomText(randomMessagges));
+                            }
+                        }
+                    });
 
-            let jurisdictionListObject = {
-                "Out": {
-                    "be": ["APCS", "APM", "BRU", "DPW", "NCTS", "PLDA", "PSA"],
-                    "de": ["DAK", "EDI"],
-                    "gb": ["CCS", "CFSP", "CNS", "DOVER", "HMRC", "MCP"],
-                    "ie": ["AEP", "AES", "AIS", "NCTS"],
-                    "nl": ["AGS", "CONF", "CPD", "DGVS", "DMS", "DOMPROC", "NCTS", "PCS", "SAGIMP", "SW", "VWA"],
-                },
+                    const randomMessagges = {
+                        "message1": "\"You know, it's costing me a lot of money to keep these droids even powered up\"",
+                        "message2": "I don't know you... What can I do for you? You look like a Jedi. Whatever it is... I didn't do it"
+                    };
 
-                "In": {
-                    "be": ["APCS", "BRU", "NCTS", "PLDA", "TUL"],
-                    "de": ["DAK", "EDI", "EDI2", "EDI3", "EDI4", "EDI-ReTry"],
-                    "gb": ["CCS", "CCS2", "CCS3", "CCS4", "CCS-ReTry", "CFSP", "CFSP-ReTry", "CNS", "CNS2", "CNS3", "CNS4", "CNS-ReTry", "DOVER", "HMRC", "HMRC2", "HMRC3", "HMRC4", "HMRC5", "HMRC6", "ICS", "MCP", "MCP2", "MCP3", "MCP4", "MCP-ReTry"],
-                    "ie": ["AEP", "AIS", "AES", "NCTS"],
-                    "nl": ["AGS", "DGVS", "DMS", "DMS2", "DMS3", "DMS4", "NCTS", "PCS", "PORTBASE", "SAGITTA", "VWA"]
-                }
-            };
-
-            let dropdown = document.querySelector('#jurDropdown');
-            let dropdownValues = document.querySelector('#dropdownValues');
-            let serviceDropdown = document.querySelector('#serviceDropdown');
-
-            let service = "";
-
-            $(serviceDropdown).change(event => {
-                service = event.target.value;
-                if (service == "In" || service == "Out") {
-                    dropdown.options.length = 0;
-
-                    for (let i = 0; i < jurisdictions.length; i++) {
-                        $('<option>').val(jurisdictions[i]).html(jurisdictions[i]).attr('id', 'jurisdiction_' + jurisdictions[i].toLowerCase()).attr('name', 'jurisdiction').appendTo(dropdown);
+                    function generateRandomText(textObj) {
+                        if (textObj != null) {
+                            let keys = Object.keys(textObj);
+                            let rdn = -1;
+                            while (rdn < 0) {
+                                rdn = Math.floor(Math.round(Math.random() * keys.length - 1, 1));
+                            }
+                            let selectedMessage = keys[rdn];
+                            return textObj[selectedMessage];
+                        }
+                        return "";
                     }
-                }
-                else {
-                    dropdownValues.options.length = 0;
-                    $(dropdownValues).val("").html("Select a value");
-                    dropdown.options.length = 0;
-                    $(dropdown).val("").html("Select a value");
 
-                }
-                $(dropdown).val("");
-                $(dropdownValues).val("");
-            });
+                    const pEle = document.getElementById('novoP');
+                    const paragraph = pEle.children;
+                    let finalLabelsIn = [];
+                    let finalDataIn = [];
+                    let finalLabelsOut = [];
+                    let finalDataOut = [];
 
-            $(dropdown).change(event => {
-                let selected = event.target.value;
-                let dropdownValues = "";
-                if (jurisdictions.includes(selected)) {
-                    let el = document.getElementById("dropdownValues");
-                    el.options.length = 0;
+                    $(paragraph).each((index, p) => {
+                        let pId = p.id;
+                        if (pId.includes("Resp")) {
+                            pId = pId.replace("Resp", "");
+                            let txt = parseInt(p.innerHTML);
+                            if (txt > 0) {
+                                finalLabelsIn.push(pId);
+                                finalDataIn.push(txt);
+                            }
+                        }
+                        if (pId.includes("Send")) {
+                            pId = pId.replace("Send", "");
+                            let txt = parseInt(p.innerHTML);
+                            if (txt > 0) {
+                                finalLabelsOut.push(pId);
+                                finalDataOut.push(txt);
+                            }
+                        }
+                    });
 
-                    selected = selected.toLowerCase();
-                    dropdownValues = jurisdictionListObject[service][selected];
+                    setInterval(function () {
+                        if (document.getElementById('refreshCheck').checked) {
+                            location.reload();
+                        }
+                    }, 30000)
 
-                    createDropdownAndPopulateValues(el, dropdownValues);
-                }
-            });
+                    //Chart below
+                    const ctx = document.getElementById('myChartIn');
 
-            $(dropdown).on('change', () => {
-                let jurSelected = document.getElementById('jurDropdown').value;
-                $('#jur').val(jurSelected);
-            });
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: finalLabelsIn,
+                            datasets: [{
+                                label: 'Number of Files',
+                                data: finalDataIn,
+                                borderWidth: 3
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: "IN MESSAGES"
+                                },
+                                legend: {
+                                    labels: {
+                                        boxWidth: 60,
+                                        boxHeight: 10,
+                                        font: {
+                                            size: 14
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
 
-            $(dropdownValues).on('change', () => {
-                let procSelected = document.getElementById('dropdownValues').value;
-                $('#pro').val(procSelected);
-            });
+                    const ctxOut = document.getElementById('myChartOut');
 
-            $(serviceDropdown).on('change', () => {
-                let serviceSelected = document.getElementById('serviceDropdown').value;
-                $('#service').val(serviceSelected);
-            });
+                    const myChartOut = new Chart(ctxOut, {
+                        type: 'pie',
+                        data: {
+                            labels: finalLabelsOut,
+                            datasets: [{
+                                label: 'Number of Files',
+                                data: finalDataOut,
+                                borderWidth: 3
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: "OUT MESSAGES"
+                                },
+                                legend: {
+                                    labels: {
+                                        boxWidth: 60,
+                                        boxHeight: 10,
+                                        font: {
+                                            size: 14
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                });
 
-            $("#submit").click(() => {
-                $("jur").val("");
-                $("pro").val("");
-                $("service").val("");
-            });
-
-            $('#pitlogo').click(() => {
-                let pitdroidMessage = document.getElementById('pitdroid-mes');
-                if (pitdroidMessage == null) {
-                    $('<h3>').html(generateRandomText(randomMessagges)).attr('id', 'pitdroid-mes').addClass('text-success').insertBefore('table');
-                } else {
-                    let currentMessage = pitdroidMessage.textContent;
-                    while (currentMessage == pitdroidMessage.textContent) {
-                        $(pitdroidMessage).html(generateRandomText(randomMessagges));
-                    }
-                }
-            });
-
-            const randomMessagges = {
-                "message1": "\"You know, it's costing me a lot of money to keep these droids even powered up\"",
-                "message2": "I don't know you... What can I do for you? You look like a Jedi. Whatever it is... I didn't do it",
-                "message3": "Oh Lord, I can't find my message",
-            };
-
-            function createDropdownAndPopulateValues(dropdownElement, values)
-            {
-
-                dropdownElement.options.length = 0;
-                for (let i = 0; i < values.length; i++)
+                function filterService()
                 {
-                    $('<option>').val(values[i]).html(values[i]).attr('id', 'procedureCode' + values[i]).attr('name', 'procedure').appendTo(dropdownElement);
-                }
-
-                $(dropdownElement).val("");
-            }
-
-            function generateRandomText(textObj)
-            {
-                if (textObj != null)
-                {
-                    let keys = Object.keys(textObj);
-                    let rdn = -1;
-                    while (rdn < 0)
-                    {
-                        rdn = Math.floor(Math.round(Math.random() * keys.length - 1, 1));
-                    }
-                    let selectedMessage = keys[rdn];
-                    return textObj[selectedMessage];
-                }
-                return "";
-            }
-
-            const pEle = document.getElementById('novoP');
-            const paragraph = pEle.children;
-            console.log(paragraph);
-            let finalLabels = [];
-            let finalData = [];
-            $(paragraph).each((index, p) => {
-                finalLabels.push(p.id);
-                let txt = p.innerHTML;
-                console.log(txt);
-                finalData.push(txt);
-            });
-            
-            //Chart below
-            const ctx = document.getElementById('myChart');
-
-            new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: finalLabels,
-                    datasets: [{
-                        label: 'Number of Files',
-                        data: finalData,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            labels: {
-                                boxWidth: 60,
-                                boxHeight: 10
+                    var input, filter, table, tr, td, i, txtValue
+                    input = document.getElementById("serviceInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("main-table");
+                    tr = table.getElementsByTagName("tr");
+                    console.log(filter);
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[1];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
                             }
                         }
                     }
                 }
-            });
-        });
-    </script>
-}
+            </script>
+        }

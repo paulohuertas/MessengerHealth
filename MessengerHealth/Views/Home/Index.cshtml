@@ -21,7 +21,7 @@
     <input type="text" id="serviceInput" onkeyup="filterService()" placeholder="Search for service" class="input-lg" />
     @{
         <div id="novoP">
-            <table id="main-table" class="table table-hover table-striped table-responsive table-bordered">
+            <table id="main-table" class="table table-hover table-striped table-responsive table-bordered table-condensed">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">Operation</th>
@@ -43,12 +43,12 @@
                             if (key.Contains("Out"))
                             {
                                 jurisdictionCode = key.Substring(key.LastIndexOf("\\") -2, 2);
-                                directoryName = jurisdictionCode + "/";
+                                directoryName = jurisdictionCode + "-";
                             }
                             else
                             {
                                 jurisdictionCode = key.Substring(key.LastIndexOf("\\") - 2, 2);
-                                directoryName = jurisdictionCode + "/";
+                                directoryName = jurisdictionCode + "-";
                             }
                             kvp.TryGetValue(key, out messengerFiles);
                             operation = messengerFiles.ServiceCode;
@@ -68,6 +68,8 @@
                             }
                             if (!String.IsNullOrEmpty(txt))
                             {
+                                string textSuccess = "text-success";
+                                string textDanger = "text-danger";
                                 <p id="@operation@directoryName" hidden>@messengerFiles.TotalFiles</p>
                                 <tr>
                                     <td scope="row" class="text-center">@operation</td>
@@ -156,7 +158,8 @@
                         if (document.getElementById('refreshCheck').checked) {
                             location.reload();
                         }
-                    }, 30000)
+                    }, 3000000) 
+                    
 
                     //Chart below
                     const ctx = document.getElementById('myChartIn');

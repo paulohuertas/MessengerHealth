@@ -1,402 +1,286 @@
 [
-  {
-    "jurisdictionId": 1,
-    "juridisctionCode": "BE",
-    "procedures": {
-      "services": {
-        "Out": [
-          {
-            "procedureCode": "APCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\APCS"
-          },
-          {
-            "procedureCode": "APM",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\APM"
-          },
-          {
-            "procedureCode": "BRU",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\BRU"
-          },
-          {
-            "procedureCode": "DPW",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\DPW"
-          },
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\NCTS"
-          },
-          {
-            "procedureCode": "PLDA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\PLDA"
-          },
-          {
-            "procedureCode": "PSA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\BE\\PSA"
-          }
-        ],
-        "In": [
-          {
-            "procedureCode": "APCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\BE\\APCS"
-          },
-          {
-            "procedureCode": "BRU",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\BE\\BRU"
-          },
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\BE\\NCTS"
-          },
-          {
-            "procedureCode": "PLDA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\BE\\PLDA"
-          },
-          {
-            "procedureCode": "TUL",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\BE\\TUL"
-          }
-        ]
+   {
+      "jurisdictionId":1,
+      "juridisctionCode":"BE",
+      "procedures":{
+         "services":{
+            "Out":[
+               {
+                  "procedureCode":"APCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\APCS"
+               },
+               {
+                  "procedureCode":"APM",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\APM"
+               },
+               {
+                  "procedureCode":"BRU",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\BRU"
+               },
+               {
+                  "procedureCode":"DPW",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\DPW"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\NCTS"
+               },
+               {
+                  "procedureCode":"PLDA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\PLDA"
+               },
+               {
+                  "procedureCode":"PSA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\BE\\PSA"
+               }
+            ],
+            "In":[
+               {
+                  "procedureCode":"APCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\BE\\APCS"
+               },
+               {
+                  "procedureCode":"BRU",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\BE\\BRU"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\BE\\NCTS"
+               },
+               {
+                  "procedureCode":"PLDA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\BE\\PLDA"
+               },
+               {
+                  "procedureCode":"TUL",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\BE\\TUL"
+               }
+            ]
+         }
       }
-    }
-  },
-  {
-    "jurisdictionId": 2,
-    "juridisctionCode": "DE",
-    "procedures": {
-      "services": {
-        "Out": [
-          {
-            "procedureCode": "DAK",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\DE\\DAK"
-          },
-          {
-            "procedureCode": "EDI",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\DE\\EDI"
-          }
-        ],
-        "In": [
-          {
-            "procedureCode": "DAK",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\DAK"
-          },
-          {
-            "procedureCode": "EDI",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI"
-          }//,
-          //{
-          //  "procedureCode": "EDI2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI2"
-          //},
-          //{
-          //  "procedureCode": "EDI3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI3"
-          //},
-          //{
-          //  "procedureCode": "EDI4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI4"
-          //},
-          //{
-          //  "procedureCode": "EDI-ReTry",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI-ReTry"
-          //}
-        ]
+   },
+   {
+      "jurisdictionId":2,
+      "juridisctionCode":"DE",
+      "procedures":{
+         "services":{
+            "Out":[
+               {
+                  "procedureCode":"DAK",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\DE\\DAK"
+               },
+               {
+                  "procedureCode":"EDI",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\DE\\EDI"
+               }
+            ],
+            "In":[
+               {
+                  "procedureCode":"DAK",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\DE\\DAK"
+               },
+               {
+                  "procedureCode":"EDI",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\DE\\EDI"
+               }
+            ]
+         }
       }
-    }
-  },
-  {
-    "jurisdictionId": 3,
-    "juridisctionCode": "UK",
-    "procedures": {
-      "services": {
-        "Out": [
-          //{
-          //  "procedureCode": "CCS_XML",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CCS\\XML"
-          //},
-		      {
-            "procedureCode": "CCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CCS"
-          },
-          {
-            "procedureCode": "CFSP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CFSP"
-          },
-          //{
-          //  "procedureCode": "CNS_XML",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CNS\\XML"
-          //},
-		      {
-            "procedureCode": "CNS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CNS"
-          },
-          //{
-          //  "procedureCode": "DOVER_XML",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\DOVER\\XML"
-          //},
-		      {
-            "procedureCode": "DOVER",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\DOVER"
-          },
-          {
-            "procedureCode": "HMRC",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\HMRC"
-          },
-          //{
-          //  "procedureCode": "MCP_XML",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\MCP\\XML"
-          //},
-		      {
-            "procedureCode": "MCP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\GB\\MCP"
-          }
-        ],
-        "In": [
-          {
-            "procedureCode": "CCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS"
-          },
-          //{
-          //  "procedureCode": "CCS2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS2"
-          //},
-          //{
-          //  "procedureCode": "CCS3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS3"
-          //},
-          //{
-          //  "procedureCode": "CCS4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS4"
-          //},
-          //{
-          //  "procedureCode": "CCS-ReTry",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS-ReTry"
-          //},
-          {
-            "procedureCode": "CFSP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CFSP"
-          },
-          //{
-          //  "procedureCode": "CFSP-ReTry",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CFSP-ReTry"
-          //},
-          {
-            "procedureCode": "CNS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS"
-          },
-          //{
-          //  "procedureCode": "CNS2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS2"
-          //},
-          //{
-          //  "procedureCode": "CNS3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS3"
-          //},
-          //{
-          //  "procedureCode": "CNS4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS4"
-          //},
-          //{
-          //  "procedureCode": "CNS-ReTry",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS-ReTry"
-          //},
-          {
-            "procedureCode": "DOVER",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\DOVER"
-          },
-          {
-            "procedureCode": "HMRC",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC"
-          },
-          //{
-          //  "procedureCode": "HMRC2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC2"
-          //},
-          //{
-          //  "procedureCode": "HMRC3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC3"
-          //},
-          //{
-          //  "procedureCode": "HMRC4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC4"
-          //},
-          //{
-          //  "procedureCode": "HMRC5",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC5"
-          //},
-          //{
-          //  "procedureCode": "HMRC6",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC6"
-          //},
-          {
-            "procedureCode": "ICS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\ICS"
-          },
-          {
-            "procedureCode": "MCP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP"
-          }//,
-          //{
-          //  "procedureCode": "MCP2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP2"
-          //},
-          //{
-          //  "procedureCode": "MCP3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP3"
-          //},
-          //{
-          //  "procedureCode": "MCP4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP4"
-          //},
-          //{
-          //  "procedureCode": "MCP-ReTry",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP-ReTry"
-          //}
-        ]
+   },
+   {
+      "jurisdictionId":3,
+      "juridisctionCode":"UK",
+      "procedures":{
+         "services":{
+            "Out":[
+               {
+                  "procedureCode":"CCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CCS"
+               },
+               {
+                  "procedureCode":"CFSP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CFSP"
+               },
+               {
+                  "procedureCode":"CNS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\CNS"
+               },
+               {
+                  "procedureCode":"DOVER",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\DOVER"
+               },
+               {
+                  "procedureCode":"HMRC",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\HMRC"
+               },
+               {
+                  "procedureCode":"MCP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\GB\\MCP"
+               }
+            ],
+            "In":[
+               {
+                  "procedureCode":"CCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\CCS"
+               },
+               {
+                  "procedureCode":"CFSP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\CFSP"
+               },
+               {
+                  "procedureCode":"CNS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\CNS"
+               },
+               {
+                  "procedureCode":"DOVER",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\DOVER"
+               },
+               {
+                  "procedureCode":"HMRC",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\HMRC"
+               },
+               {
+                  "procedureCode":"ICS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\ICS"
+               },
+               {
+                  "procedureCode":"MCP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\GB\\MCP"
+               }
+            ]
+         }
       }
-    }
-  },
-  {
-    "jurisdictionId": 4,
-    "juridisctionCode": "IE",
-    "procedures": {
-      "services": {
-        "Out": [
-          {
-            "procedureCode": "AEP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AEP"
-          },
-          {
-            "procedureCode": "AIS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AIS"
-          },
-          {
-            "procedureCode": "AES",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AES"
-          },
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\IE\\NCTS"
-          }
-        ],
-        "In": [
-          {
-            "procedureCode": "AEP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\IE\\AEP"
-          },
-          {
-            "procedureCode": "AIS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\IE\\AIS"
-          },
-          {
-            "procedureCode": "AES",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\IE\\AES"
-          },
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\IE\\NCTS"
-          }
-        ]
+   },
+   {
+      "jurisdictionId":4,
+      "juridisctionCode":"IE",
+      "procedures":{
+         "services":{
+            "Out":[
+               {
+                  "procedureCode":"AEP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AEP"
+               },
+               {
+                  "procedureCode":"AIS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AIS"
+               },
+               {
+                  "procedureCode":"AES",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\IE\\AES"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\IE\\NCTS"
+               }
+            ],
+            "In":[
+               {
+                  "procedureCode":"AEP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\IE\\AEP"
+               },
+               {
+                  "procedureCode":"AIS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\IE\\AIS"
+               },
+               {
+                  "procedureCode":"AES",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\IE\\AES"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\IE\\NCTS"
+               }
+            ]
+         }
       }
-    }
-  },
-  {
-    "jurisdictionId": 5,
-    "juridisctionCode": "NL",
-    "procedures": {
-      "services": {
-        "Out": [
-          {
-            "procedureCode": "AGS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\AGS"
-          },
-          {
-            "procedureCode": "CONF",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\CONF"
-          },
-          {
-            "procedureCode": "CPD",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\CPD"
-          },
-          {
-            "procedureCode": "DGVS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DGVS"
-          },
-          {
-            "procedureCode": "DMS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DMS"
-          },
-          {
-            "procedureCode": "DOMPROC",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DOMPROC"
-          },
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\NCTS"
-          },
-          {
-            "procedureCode": "PCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\PCS"
-          },
-          {
-            "procedureCode": "SAGIMP",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\SAGIMP"
-          },
-          {
-            "procedureCode": "SW",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\SW"
-          },
-          {
-            "procedureCode": "VWA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\Out\\NL\\VWA"
-          }
-        ],
-        "In": [
-          {
-            "procedureCode": "AGS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\AGS"
-          },
-          {
-            "procedureCode": "DGVS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\DGVS"
-          },
-          {
-            "procedureCode": "DMS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\DMS"
-          },
-          //{
-          //  "procedureCode": "DMS2",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\DMS2"
-          //},
-          //{
-          //  "procedureCode": "DMS3",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\DMS3"
-          //},
-          //{
-          //  "procedureCode": "DMS4",
-          //  "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\DMS4"
-          //},
-          {
-            "procedureCode": "NCTS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\NCTS"
-          },
-          {
-            "procedureCode": "PCS",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\PCS"
-          },
-          {
-            "procedureCode": "PORTBASE",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\PORTBASE"
-          },
-          {
-            "procedureCode": "SAGITTA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\SAGITTA"
-          },
-          {
-            "procedureCode": "VWA",
-            "directoryPath": "\\\\10.0.220.102\\dev-fs\\sync\\ect\\CustomsWare\\In\\NL\\VWA"
-          }
-        ]
+   },
+   {
+      "jurisdictionId":5,
+      "juridisctionCode":"NL",
+      "procedures":{
+         "services":{
+            "Out":[
+               {
+                  "procedureCode":"AGS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\AGS"
+               },
+               {
+                  "procedureCode":"CONF",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\CONF"
+               },
+               {
+                  "procedureCode":"CPD",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\CPD"
+               },
+               {
+                  "procedureCode":"DGVS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DGVS"
+               },
+               {
+                  "procedureCode":"DMS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DMS"
+               },
+               {
+                  "procedureCode":"DOMPROC",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\DOMPROC"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\NCTS"
+               },
+               {
+                  "procedureCode":"PCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\PCS"
+               },
+               {
+                  "procedureCode":"SAGIMP",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\SAGIMP"
+               },
+               {
+                  "procedureCode":"SW",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\SW"
+               },
+               {
+                  "procedureCode":"VWA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\Out\\NL\\VWA"
+               }
+            ],
+            "In":[
+               {
+                  "procedureCode":"AGS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\AGS"
+               },
+               {
+                  "procedureCode":"DGVS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\DGVS"
+               },
+               {
+                  "procedureCode":"DMS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\DMS"
+               },
+               {
+                  "procedureCode":"NCTS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\NCTS"
+               },
+               {
+                  "procedureCode":"PCS",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\PCS"
+               },
+               {
+                  "procedureCode":"PORTBASE",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\PORTBASE"
+               },
+               {
+                  "procedureCode":"SAGITTA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\SAGITTA"
+               },
+               {
+                  "procedureCode":"VWA",
+                  "directoryPath":"\\\\10.0.221.25\\jeraddo-fs\\sync\\ect\\CustomsWare\\In\\NL\\VWA"
+               }
+            ]
+         }
       }
-    }
-  }
+   }
 ]

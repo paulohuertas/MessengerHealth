@@ -21,6 +21,13 @@ namespace MessengerHealth.Models
             this.ServiceCode = serviceCode;
         }
 
+        public MessengerFiles(string file, string serviceCode, DateTime lastWrittenDate)
+        {
+            this.DirectoryPath = file;
+            this.LastWrittenDate = lastWrittenDate;
+            this.ServiceCode = serviceCode;
+        }
+
         public MessengerFiles() { }
 
         public string GetShortFileName()

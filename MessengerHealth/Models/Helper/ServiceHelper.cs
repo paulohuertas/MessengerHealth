@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using Microsoft.WindowsAzure.Storage.File;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Auth;
 
 namespace MessengerHealth.Models.Helper
 {
@@ -20,8 +23,6 @@ namespace MessengerHealth.Models.Helper
             for (int i = 0; i < jurisdictions.Count; i++)
             {
                 string keyCode = jurisdictions[i].JuridisctionCode;
-                
-                //if (keyCode == "GB") keyCode = "UK";
 
                 foreach (var inPath in jurisdictions[i].Procedures.Services.In)
                 {
